@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ammonia.catchapp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.location.gps"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.sensor.accelerometer"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.sensor.compass"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.sensor.gyroscope"
+        android:required="true" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher_catchapp"
+        android:label="CatchApp"
+        android:roundIcon="@mipmap/ic_launcher_catchapp"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".ViewTypes.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ViewTypes.SignInActivity"
+            android:label="@string/sign_in_activity"
+            android:theme="@style/ThemeOverlay.MyNoTitleActivity" />
+        <activity
+            android:name=".ViewTypes.SettingsActivity"
+            android:parentActivityName=".ViewTypes.MainActivity" />
+        <activity
+            android:name=".ViewTypes.FriendActivity"
+            android:parentActivityName=".ViewTypes.MainActivity" />
+        <activity
+            android:name=".ViewTypes.EventSettingsActivity"
+            android:parentActivityName=".ViewTypes.EventActivity" />
+        <activity
+            android:name=".ViewTypes.ConversationActivity"
+            android:parentActivityName=".ViewTypes.MainActivity" />
+        <activity
+            android:name=".ViewTypes.EventActivity"
+            android:parentActivityName=".ViewTypes.MainActivity" />
+        <activity
+            android:name=".ViewTypes.ARActivity"
+            android:parentActivityName=".ViewTypes.EventActivity" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".ViewTypes.MapView"
+            android:label="@string/title_activity_map_view" />
+
+        <service android:name=".firecloudmessaging.CatchAppFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".firecloudmessaging.CatchAppFirebaseInstanceIDService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity android:name=".ViewTypes.SearchFriendActivity" />
+        <activity android:name=".ViewTypes.CreateEventActivity" />
+        <activity android:name=".ViewTypes.CreateConversationActivity" />
+        <activity android:name=".ViewTypes.InvitesActivity"></activity>
+        <activity android:name=".ViewTypes.SelectFriendsActivity"></activity>
+
+        <service android:name = ".services.GPS_Service"/>
+
+    </application>
+
+</manifest>

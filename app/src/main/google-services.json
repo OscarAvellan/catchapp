@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "654761864013",
+    "firebase_url": "https://catchapp-ammonia.firebaseio.com",
+    "project_id": "catchapp-ammonia",
+    "storage_bucket": "catchapp-ammonia.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:654761864013:android:8ed3c87172416b8e",
+        "android_client_info": {
+          "package_name": "com.ammonia.catchapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "654761864013-2u65ot6kp03nt4qmt8hm6268ne8is5e8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtm77lPTs17-yCGEVNYzhJk8dzDvIzUXQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

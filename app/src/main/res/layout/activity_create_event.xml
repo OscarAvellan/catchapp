@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ammonia.catchapp.ViewTypes.CreateEventActivity">
+    
+    <include android:id="@+id/toolbar"
+        layout = "@layout/toolbar">
+    </include>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintRight_toLeftOf="parent">
+
+    <EditText
+        android:id="@+id/text_event_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Name"/>
+    
+    <EditText
+        android:id="@+id/text_event_start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="2017-10-18/15:00:00"
+        android:inputType="datetime"
+        android:hint="Starts at"/>
+    
+    <EditText
+        android:id="@+id/text_event_end"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="2017-10-18/15:30:00"
+        android:inputType="datetime"
+        android:hint="Ends at"/>
+    
+    <EditText
+        android:id="@+id/text_event_lat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="-37.798375"
+        android:hint="Latitude"/>
+
+    <EditText
+        android:id="@+id/text_event_long"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="144.959368"
+        android:hint="Longitude"/>
+
+    <Button
+        android:id="@+id/button_create_event"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Create Event"
+        android:onClick="createEvent"/>
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
